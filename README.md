@@ -1,6 +1,6 @@
 # ldap docker image for PIV Gateway 
 
-本レポジトリに`検証目的`のためのopenldap docker image を用意しています。 
+本レポジトリに`検証目的`のためのopenldap docker imageを用意しています。 
 
 注意: 商用利用ではお客様にて準備した認証局、LDAP環境を準備ください。
 
