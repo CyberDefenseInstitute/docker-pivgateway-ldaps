@@ -1,0 +1,31 @@
+dn: ou=people, dc=example,dc=com
+ou: people
+description: All people in organisation
+objectclass: organizationalunit
+
+dn: cn=Robert Smith,ou=people,dc=example,dc=com
+objectclass: inetOrgPerson
+cn: Robert Smith
+cn: Robert J Smith
+cn: bob  smith
+sn: smith
+uid: rjsmith
+userpassword: rJsmitH
+carlicense: HISCAR 123
+homephone: 555-111-2222
+mail: r.smith@example.com
+mail: rsmith@example.com
+mail: bob.smith@example.com
+description: swell guy
+ou: Human Resources
+
+dn: ou=groups, dc=example,dc=com
+ou: groups
+description: All grops in organisation
+objectclass: organizationalunit
+
+dn: cn=room1, ou=groups, dc=example, dc=com
+objectclass: groupOfNames
+objectclass: top
+cn: room1
+member: cn=Robert Smith,ou=people,dc=example,dc=com
