@@ -122,3 +122,12 @@ root@ldap:/# exit
 ディレクトリ cert 内にldap.crt 公開鍵証明書、ldap.key 秘密鍵が保存されており、ldapのサーバ証明書として利用します。
 
 なお証明書の有効期限は2031年9月22日となっています。
+
+## Container platform
+
+Application and service images use Ubuntu 26.04 LTS with system OpenSSL 3.5.x.
+Use fresh test volumes to validate the migration before switching existing services.
+OpenLDAP is rebuilt with the OpenSSL backend. Existing OpenLDAP databases
+and cn=config volumes must be exported with the old server and imported as LDIF
+into a newly initialized server. Set LDAP_BOOTSTRAP=false when seeding your own
+LDIF. LDAP_TLS and the LDAP_TLS_* filename variables configure TLS under /certs.
